@@ -1,0 +1,828 @@
+@preamble{ "\newcommand{\noopsort}[1]{} "
+	# "\newcommand{\printfirst}[2]{#1} "
+	# "\newcommand{\singleletter}[1]{#1} "
+	# "\newcommand{\switchargs}[2]{#2#1} " }
+
+@ARTICLE{article-minimal,
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+}
+
+@ARTICLE{article-full,
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   pages = "73+",
+   month = jul,
+   note = "This is a full ARTICLE entry",
+}
+
+The KEY field is here to override the KEY field in the journal being
+cross referenced (so is the NOTE field, in addition to its imparting
+information).
+
+@ARTICLE{article-crossref,
+   crossref = {WHOLE-JOURNAL},
+   key = "",
+   author = {L[eslie] A. Aamport},
+   title = {The Gnats and Gnus Document Preparation System},
+   pages = "73+",
+   note = "This is a cross-referencing ARTICLE entry",
+}
+
+@ARTICLE{whole-journal,
+   key = "GAJ",
+   journal = {\mbox{G-Animal's} Journal},
+   year = 1986,
+   volume = 41,
+   number = 7,
+   month = jul,
+   note = {The entire issue is devoted to gnats and gnus
+		(this entry is a cross-referenced ARTICLE (journal))},
+}
+
+@INBOOK{inbook-minimal,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973b}}1973",
+   chapter = "1.2",
+}
+
+@INBOOK{inbook-full,
+   author = "Donald E. Knuth",
+   title = "Fundamental Algorithms",
+   volume = 1,
+   series = "The Art of Computer Programming",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Second",
+   month = "10~" # jan,
+   year = "{\noopsort{1973b}}1973",
+   type = "Section",
+   chapter = "1.2",
+   pages = "10--119",
+   note = "This is a full INBOOK entry",
+}
+
+@INBOOK{inbook-crossref,
+   crossref = "whole-set",
+   title = "Fundamental Algorithms",
+   volume = 1,
+   series = "The Art of Computer Programming",
+   edition = "Second",
+   year = "{\noopsort{1973b}}1973",
+   type = "Section",
+   chapter = "1.2",
+   note = "This is a cross-referencing INBOOK entry",
+}
+
+@BOOK{book-minimal,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   publisher = "Addison-Wesley",
+   year = "{\noopsort{1973c}}1981",
+}
+
+@BOOK{book-full,
+   author = "Donald E. Knuth",
+   title = "Seminumerical Algorithms",
+   volume = 2,
+   series = "The Art of Computer Programming",
+   publisher = "Addison-Wesley",
+   address = "Reading, Massachusetts",
+   edition = "Second",
+   month = "10~" # jan,
+   year = "{\noopsort{1973c}}1981",
+   note = "This is a full BOOK entry",
+}
+
+@BOOK{book-crossref,
+   crossref = "whole-set",
+   title = "Seminumerical Algorithms",
+   volume = 2,
+   series = "The Art of Computer Programming",
+   edition = "Second",
+   year = "{\noopsort{1973c}}1981",
+   note = "This is a cross-referencing BOOK entry",
+}
+
+@BOOK{whole-set,
+   author = "Donald E. Knuth",
+   publisher = "Addison-Wesley",
+   title = "The Art of Computer Programming",
+   series = "Four volumes",
+   year = "{\noopsort{1973a}}{\switchargs{--90}{1968}}",
+   note = "Seven volumes planned (this is a cross-referenced set of BOOKs)",
+}
+
+@BOOKLET{booklet-minimal,
+   key = "Kn{\printfirst{v}{1987}}",
+   title = "The Programming of Computer Art",
+}
+
+@BOOKLET{booklet-full,
+   author = "Jill C. Knvth",
+   title = "The Programming of Computer Art",
+   howpublished = "Vernier Art Center",
+   address = "Stanford, California",
+   month = feb,
+   year = 1988,
+   note = "This is a full BOOKLET entry",
+}
+
+@INCOLLECTION{incollection-minimal,
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   publisher = "Academic Press",
+   year = 1977,
+}
+
+@INCOLLECTION{incollection-full,
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   editor = "David J. Lipcoll and D. H. Lawrie and A. H. Sameh",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   number = 23,
+   series = "Fast Computers",
+   chapter = 3,
+   type = "Part",
+   pages = "179--183",
+   publisher = "Academic Press",
+   address = "New York",
+   edition = "Third",
+   month = sep,
+   year = 1977,
+   note = "This is a full INCOLLECTION entry",
+}
+
+@INCOLLECTION{incollection-crossref,
+   crossref = "whole-collection",
+   author = "Daniel D. Lincoll",
+   title = "Semigroups of Recurrences",
+   pages = "179--183",
+   note = "This is a cross-referencing INCOLLECTION entry",
+}
+
+@BOOK{whole-collection,
+   editor = "David J. Lipcoll and D. H. Lawrie and A. H. Sameh",
+   title = "High Speed Computer and Algorithm Organization",
+   booktitle = "High Speed Computer and Algorithm Organization",
+   number = 23,
+   series = "Fast Computers",
+   publisher = "Academic Press",
+   address = "New York",
+   edition = "Third",
+   month = sep,
+   year = 1977,
+   note = "This is a cross-referenced BOOK (collection) entry",
+}
+
+@MANUAL{manual-minimal,
+   key = "Manmaker",
+   title = "The Definitive Computer Manual",
+}
+
+@MANUAL{manual-full,
+   author = "Larry Manmaker",
+   title = "The Definitive Computer Manual",
+   organization = "Chips-R-Us",
+   address = "Silicon Valley",
+   edition = "Silver",
+   month = apr # "-" # may,
+   year = 1986,
+   note = "This is a full MANUAL entry",
+}
+
+@MASTERSTHESIS{mastersthesis-minimal,
+   author = "{\'{E}}douard Masterly",
+   title = "Mastering Thesis Writing",
+   school = "Stanford University",
+   year = 1988,
+}
+
+@MASTERSTHESIS{mastersthesis-full,
+   author = "{\'{E}}douard Masterly",
+   title = "Mastering Thesis Writing",
+   school = "Stanford University",
+   type = "Master's project",
+   address = "English Department",
+   month = jun # "-" # aug,
+   year = 1988,
+   note = "This is a full MASTERSTHESIS entry",
+}
+
+@MISC{misc-minimal,
+   key = "Missilany",
+   note = "This is a minimal MISC entry",
+}
+
+@MISC{misc-full,
+   author = "Joe-Bob Missilany",
+   title = "Handing out random pamphlets in airports",
+   howpublished = "Handed out at O'Hare",
+   month = oct,
+   year = 1984,
+   note = "This is a full MISC entry",
+}
+
+@STRING{STOC-key = "OX{\singleletter{stoc}}"}
+
+@STRING{ACM = "The OX Association for Computing Machinery"}
+
+@STRING{STOC = " Symposium on the Theory of Computing"}
+
+@INPROCEEDINGS{inproceedings-minimal,
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   year = 1983,
+}
+
+@INPROCEEDINGS{inproceedings-full,
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   editor = "Wizard V. Oz and Mihalis Yannakakis",
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   number = 17,
+   series = "All ACM Conferences",
+   pages = "133--139",
+   month = mar,
+   year = 1983,
+   address = "Boston",
+   organization = ACM,
+   publisher = "Academic Press",
+   note = "This is a full INPROCEDINGS entry",
+}
+
+@INPROCEEDINGS{inproceedings-crossref,
+   crossref = "whole-proceedings",
+   author = "Alfred V. Oaho and Jeffrey D. Ullman and Mihalis Yannakakis",
+   title = "On Notions of Information Transfer in {VLSI} Circuits",
+   organization = "",
+   pages = "133--139",
+   note = "This is a cross-referencing INPROCEEDINGS entry",
+}
+
+@PROCEEDINGS{proceedings-minimal,
+   key = STOC-key,
+   title = "Proc. Fifteenth Annual" # STOC,
+   year = 1983,
+}
+
+@PROCEEDINGS{proceedings-full,
+   editor = "Wizard V. Oz and Mihalis Yannakakis",
+   title = "Proc. Fifteenth Annual" # STOC,
+   number = 17,
+   series = "All ACM Conferences",
+   month = mar,
+   year = 1983,
+   address = "Boston",
+   organization = ACM,
+   publisher = "Academic Press",
+   note = "This is a full PROCEEDINGS entry",
+}
+
+@PROCEEDINGS{whole-proceedings,
+   key = STOC-key,
+   organization = ACM,
+   title = "Proc. Fifteenth Annual" # STOC,
+   address = "Boston",
+   year = 1983,
+   booktitle = "Proc. Fifteenth Annual ACM" # STOC,
+   note = "This is a cross-referenced PROCEEDINGS",
+}
+
+@PHDTHESIS{phdthesis-minimal,
+   author = "F. Phidias Phony-Baloney",
+   title = "Fighting Fire with Fire: Festooning {F}rench Phrases",
+   school = "Fanstord University",
+   year = 1988,
+}
+
+@PHDTHESIS{phdthesis-full,
+   author = "F. Phidias Phony-Baloney",
+   title = "Fighting Fire with Fire: Festooning {F}rench Phrases",
+   school = "Fanstord University",
+   type = "{PhD} Dissertation",
+   address = "Department of French",
+   month = jun # "-" # aug,
+   year = 1988,
+   note = "This is a full PHDTHESIS entry",
+}
+
+@TECHREPORT{techreport-minimal,
+   author = "Tom Terrific",
+   title = "An {$O(n \log n / \! \log\log n)$} Sorting Algorithm",
+   institution = "Fanstord University",
+   year = 1988,
+}
+
+@TECHREPORT{techreport-full,
+   author = "Tom T{\'{e}}rrific",
+   title = "An {$O(n \log n / \! \log\log n)$} Sorting Algorithm",
+   institution = "Fanstord University",
+   type = "Wishful Research Result",
+   number = "7",
+   address = "Computer Science Department, Fanstord, California",
+   month = oct,
+   year = 1988,
+   note = "This is a full TECHREPORT entry",
+}
+
+@UNPUBLISHED{unpublished-minimal,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Lower Bounds for Wishful Research Results",
+   note = "Talk at Fanstord University (this is a minimal UNPUBLISHED entry)",
+}
+
+@UNPUBLISHED{unpublished-full,
+   author = "Ulrich {\"{U}}nderwood and Ned {\~N}et and Paul {\={P}}ot",
+   title = "Lower Bounds for Wishful Research Results",
+   month = nov # ", " # dec,
+   year = 1988,
+   note = "Talk at Fanstord University (this is a full UNPUBLISHED entry)",
+}
+
+@MISC{random-note-crossref,
+   key = {Volume-2},
+   note = "Volume~2 is listed under Knuth \cite{book-full}"
+}
+
+
+%%%%% ACTUAL REFS START %%%%%%
+
+@MISC {nikolatesla1914,
+    author= {Tesla, N.},
+    title= {Apparatus for transmitting electrical energy},
+    howpublished = {U.S. Patent},
+    month= {dec},
+    year= {1914},
+    note= {Patent US 1119732 A}
+}
+
+@ARTICLE{wpt-progress,
+author={Hui, S.Y.R. and Wenxing Zhong and Lee, C.K.},
+journal={Power Electronics, IEEE Transactions on},
+title={A Critical Review of Recent Progress in Mid-Range Wireless Power Transfer},
+year={2014},
+volume={29},
+number={9},
+pages={4500-4511},
+doi={10.1109/TPEL.2013.2249670},
+ISSN={0885-8993},
+month={Sept},}
+
+@article{nguyen_dort_2010,
+title = {The {DORT} solution in acoustic inverse scattering problem of a small elastic scatterer},
+volume = {50},
+issn = {0041624X},
+url = {http://linkinghub.elsevier.com/retrieve/pii/S0041624X1000079X},
+doi = {10.1016/j.ultras.2010.04.007},
+number = {8},
+urldate = {2013-10-12},
+journal = {Ultrasonics},
+author = {Nguyen, Dinh-Quy and Gan, Woon-Seng},
+month = aug,
+year = {2010},
+pages = {829--840},
+}
+
+@article{barbieri_time_2010,
+title = {Time reversal {DORT} method applied to nonlinear elastic wave scattering},
+volume = {47},
+issn = {01652125},
+url = {http://linkinghub.elsevier.com/retrieve/pii/S0165212510000144},
+doi = {10.1016/j.wavemoti.2010.01.004},
+number = {7},
+urldate = {2013-10-12},
+journal = {Wave Motion},
+author = {Barbieri, E. and Meo, M.},
+month = nov,
+year = {2010},
+pages = {452--467},
+}
+
+@article{taddese_sensing_2010,
+title = {Sensing small changes in a wave chaotic scattering system},
+volume = {108},
+issn = {00218979},
+url = {http://link.aip.org/link/JAPIAU/v108/i11/p114911/s1&Agg=doi},
+doi = {10.1063/1.3518047},
+number = {11},
+urldate = {2013-10-12},
+journal = {Journal of Applied Physics},
+author = {Taddese, Biniyam Tesfaye and Antonsen, Thomas M. and Ott, Edward and Anlage, Steven M.},
+year = {2010},
+pages = {114911},
+}
+
+@article{chambers_target_2007,
+title = {Target characterization using time-reversal symmetry of wave propagation},
+volume = {21},
+issn = {0217-9792},
+url = {http://www.worldscientific.com/doi/abs/10.1142/S0217979207037521},
+doi = {10.1142/S0217979207037521},
+abstract = {Over the last 15 years, there has been rapid growth in applications of time-reversal symmetry of wave propagation to enhance communications and imaging through highly scattering media. These techniques exploit both temporal and spatial reciprocity to mitigate signal distortion created from the large number of independent propagation paths between a transmitter and receiver. The time-reversal process is often described by the time-reversal operator (TRO), or equivalently by the multistatic response matrix (MRM), defined by the transmit and receive system. A singular value decomposition of this operator (or MRM) is the starting point for many of the time-reversal imaging techniques. In addition to imaging, this decomposition can also be used to extract information about objects embedded within the propagation medium, i.e., target characterization. In this paper, we review the development of target characterization in time-reversal, with an emphasis on extracting information from small targets. We will analyze the MRM for both acoustic and electromagnetic scattering and show how the symmetry of the target is reflected in the properties of the singular value spectrum. Finally, we discuss several open problems and potential applications.},
+number = {20},
+urldate = {2016-03-22},
+journal = {International Journal of Modern Physics B},
+author = {Chambers, D. H.},
+month = aug,
+year = {2007},
+pages = {3511--3555},
+}
+
+@ARTICLE{history-wpt,
+author={Brown, William C.},
+journal={Microwave Theory and Techniques, IEEE Transactions on},
+title={The History of Power Transmission by Radio Waves},
+year={1984},
+volume={32},
+number={9},
+pages={1230-1242},
+keywords={Aircraft;History;Lenses;Power generation;Power system reliability;Power transmission;Radio frequency;Satellite broadcasting;Solar energy;Space technology},
+doi={10.1109/TMTT.1984.1132833},
+ISSN={0018-9480},
+month={Sep},
+}
+
+@BOOK {hansjurgenstockmann2006,
+    author    = "Hans-Jürgen Stöckmann",
+    title     = "Quantum Chaos: An Introduction",
+    publisher = "Cambridge University Press",
+    year      = "2006"
+}
+@UNPUBLISHED {computersimulationtechnology,
+    author = "Computer Simulation Technology",
+    title  = "The Finite Integration Technique",
+    note   = "Retrieved fro mthe CST website  https://www.cst.com/Products/CSTmws/FIT"
+}
+
+@inproceedings{mimo,
+author = {Jadidian, Jouya and Katabi, Dina},
+title = {Magnetic MIMO: How to Charge Your Phone in Your Pocket},
+booktitle = {Proceedings of the 20th Annual International Conference on Mobile Computing and Networking},
+series = {MobiCom '14},
+year = {2014},
+isbn = {978-1-4503-2783-1},
+location = {Maui, Hawaii, USA},
+pages = {495--506},
+numpages = {12},
+acmid = {2639130},
+publisher = {ACM},
+}
+
+@article{simpson_pulse_1999,
+title = {Pulse inversion {Doppler}: a new method for detecting nonlinear echoes from microbubble contrast agents},
+volume = {46},
+shorttitle = {Pulse inversion {Doppler}},
+url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=753026},
+number = {2},
+urldate = {2016-01-19},
+journal = {Ultrasonics, Ferroelectrics, and Frequency Control, IEEE Transactions on},
+author = {Simpson, David Hope and Chin, Chien Ting and Burns, Peter N.},
+year = {1999},
+pages = {372--382},
+}
+
+@article{hemmady_universal_2006,
+title = {Universal properties of two-port scattering, impedance, and admittance matrices of wave-chaotic systems},
+author = {Hemmady, Sameer and Zheng, Xing and Hart, James and Antonsen, Thomas M. and Ott, Edward and Anlage, Steven M.},
+journal = {Phys. Rev. E},
+volume = {74},
+issue = {3},
+pages = {036213},
+numpages = {12},
+year = {2006},
+month = {Sep},
+publisher = {American Physical Society},
+doi = {10.1103/PhysRevE.74.036213},
+url = {http://link.aps.org/doi/10.1103/PhysRevE.74.036213}
+}
+
+@misc{furman_tesla_2013,
+title = {Tesla {Block} {Figure}},
+author = {Furman, Timothy},
+month = nov,
+year = {2013},
+}
+
+@article{blomgren_super-resolution_2002,
+title = {Super-resolution in time-reversal acoustics},
+volume = {111},
+issn = {00014966},
+url = {http://link.aip.org/link/JASMAN/v111/i1/p230/s1&Agg=doi},
+doi = {10.1121/1.1421342},
+number = {1},
+urldate = {2013-10-12},
+journal = {The Journal of the Acoustical Society of America},
+author = {Blomgren, Peter and Papanicolaou, George and Zhao, Hongkai},
+year = {2002},
+pages = {230},
+}
+
+@article{schneider2010understanding,
+  title={Understanding the finite-difference time-domain method},
+  author={Schneider, John B},
+  journal={School of electrical engineering and computer science Washington State University.--URL: http://www. Eecs. Wsu. Edu/\~{} schneidj/ufdtd/(request data: 29.11. 2012)},
+  year={2010}
+}
+
+@article{weiland2001discrete,
+  title={Discrete electromagnetism with the finite integration technique},
+  author={Weiland, M Clemens T},
+  journal={Progress In Electromagnetics Research},
+  volume={32},
+  pages={65--87},
+  year={2001},
+  publisher={EMW Publishing}
+}
+
+@article{beh_automated_2013,
+title = {Automated {Impedance} {Matching} {System} for {Robust} {Wireless} {Power} {Transfer} via {Magnetic} {Resonance} {Coupling}},
+volume = {60},
+issn = {0278-0046},
+doi = {10.1109/TIE.2012.2206337},
+abstract = {Recently, a highly efficient midrange wireless transfer technology using electromagnetic resonance coupling has been proposed and has received much attention due to its practical range and efficiency. The resonance frequency of the resonators changes as the gap between the resonators changes. However, when this technology is applied in the megahertz range, the usable frequency is bounded by the industrial, scientific, and medical (ISM) band. Therefore, to achieve maximum power transmission efficiency, the resonance frequency has to be fixed within the ISM band. In this paper, an automated impedance matching (IM) system is proposed to increase the efficiency by matching the resonance frequency of the resonator pair to that of the power source. The simulations and experiments verify that the IM circuits can change the resonance frequency to 13.56 MHz (in the ISM band) for different air gaps, improving the power transfer efficiency. Experiments also verified that automated IM can be easily achieved just by observing and minimizing the reflected wave at the transmitting side of the system.},
+number = {9},
+journal = {IEEE Transactions on Industrial Electronics},
+author = {Beh, Teck Chuan and Kato, M. and Imura, T. and Oh, Sehoon and Hori, Y.},
+year = {2013},
+keywords = {automated impedance matching system, Automation, Coils, Couplings, electromagnetic devices, electromagnetic induction method, electromagnetic resonance coupling, Equations, Equivalent circuits, frequency 13.56 MHz, IM, Impedance, impedance matching, impedance matching (IM), inductive power transmission, industrial-scientific-medical band, ISM band, magnetic resonance, maximum efficiency, maximum power transmission efficiency, resonance frequency, Resonant frequency, resonator, resonators, robust wireless power transfer, wireless power transfer (WPT)},
+pages = {3689--3698},
+}
+
+@article{nltr-wave-chaotic,
+ title={Nonlinear time reversal in a wave chaotic system},
+ author={Frazier, Matthew and Taddese, Biniyam and Antonsen, Thomas and Anlage, Steven M},
+ journal={Physical review letters},
+ volume={110},
+ number={6},
+ pages={063902},
+ year={2013},
+ publisher={APS}
+}
+
+@book{griffiths_david_introduction_1999,
+edition = {3},
+title = {Introduction to {Electrodynamics}},
+isbn = {978-0-13-805326-0},
+publisher = {Prentice Hall},
+author = {{Griffiths, David}},
+year = {1999}
+}
+
+@misc{butler_tour_2013,
+title = {Tour {WiTricity}’s {Room} of {Tomorrow}: {Wireless} {Charging} {That}’s {Flexible}},
+shorttitle = {Tour {WiTricity}’s {Room} of {Tomorrow}},
+url = {http://blog.laptopmag.com/tour-witricitys-room-of-tomorrow-wireless-charging-thats-flexible},
+abstract = {WiTricity's suite shows how magnetic resonance charging technology can be built into phones, laptops, cars, even the carpet of your home.},
+language = {English},
+urldate = {2013-12-13},
+journal = {Laptop},
+author = {Butler, Kenneth},
+month = dec,
+year = {2013},
+}
+
+@article{hemmady2006universal,
+  title={Universal properties of two-port scattering, impedance, and admittance matrices of wave-chaotic systems},
+  author={Hemmady, Sameer and Zheng, Xing and Hart, James and Antonsen Jr, Thomas M and Ott, Edward and Anlage, Steven M},
+  journal={Physical Review E},
+  volume={74},
+  number={3},
+  pages={036213},
+  year={2006},
+  publisher={APS}
+}
+
+@book{goldstein_polarized_2003,
+address = {New York},
+title = {Polarized light.},
+isbn = {0-8247-4053-X 978-0-8247-4053-5},
+language = {English},
+publisher = {Marcel Dekker},
+author = {Goldstein, Dennis H and Collett, Edward},
+year = {2003},
+}
+
+@inproceedings{zhai_practical_2010,
+title = {A practical wireless charging system based on ultra-wideband retro-reflective beamforming},
+url = {http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5561113},
+urldate = {2013-10-12},
+booktitle = {Antennas and {Propagation} {Society} {International} {Symposium} ({APSURSI}), 2010 {IEEE}},
+author = {Zhai, Huiqing and Pan, Helen K. and Lu, Mingyu},
+year = {2010},
+pages = {1--4},
+}
+
+@techreport{kesler_highly_2013,
+address = {Watertown MA},
+title = {Highly {Resonant} {Wireless} {Power} {Transfer}: {Safe} {Efficient} and over {Distance}},
+institution = {WiTricity},
+author = {Kesler, Morris},
+year = {2013},
+pages = {1--32},
+}
+
+@article{tucker_contribution_2013,
+title = {A contribution to the wireless transmission of power},
+volume = {47},
+issn = {01420615},
+url = {http://linkinghub.elsevier.com/retrieve/pii/S0142061512006308},
+doi = {10.1016/j.ijepes.2012.10.066},
+urldate = {2013-10-12},
+journal = {International Journal of Electrical Power \& Energy Systems},
+author = {Tucker, C.A. and Warwick, K. and Holderbaum, W.},
+month = may,
+year = {2013},
+pages = {235--242},
+}
+
+@misc{giler_demo_2009,
+address = {Oxford, England},
+type = {{TedTalk}},
+title = {A demo of {Wireless} {Electricity}},
+url = {http://www.ted.com/talks/eric_giler_demos_wireless_electricity.html},
+language = {English},
+urldate = {2013-12-12},
+author = {Giler, Eric},
+month = jul,
+year = {2009}
+}
+
+@article{prada_iterative_1991,
+title = {The iterative time reversal mirror: {A} solution to self-focusing in the pulse echo mode},
+volume = {90},
+issn = {00014966},
+shorttitle = {The iterative time reversal mirror},
+url = {http://link.aip.org/link/JASMAN/v90/i2/p1119/s1&Agg=doi},
+doi = {10.1121/1.402301},
+number = {2},
+urldate = {2013-12-13},
+journal = {The Journal of the Acoustical Society of America},
+author = {Prada, C.},
+year = {1991},
+pages = {1119}
+}
+
+@article{prada_decomposition_1996,
+title = {Decomposition of the time reversal operator: {Detection} and selective focusing on two scatterers},
+volume = {99},
+shorttitle = {Decomposition of the time reversal operator},
+url = {http://link.aip.org/link/?JASMAN/99/2067/1},
+urldate = {2013-10-12},
+journal = {The Journal of the Acoustical Society of America},
+author = {Prada, Claire and Manneville, Sébastien and Spoliansky, Dimitri and Fink, Mathias},
+year = {1996},
+pages = {2067},
+}
+
+@book{smith_waves_2010,
+address = {New York},
+title = {Waves and oscillations: a prelude to quantum mechanics},
+isbn = {978-0-19-539349-1},
+shorttitle = {Waves and oscillations},
+publisher = {Oxford University Press},
+author = {Smith, Walter Fox},
+year = {2010},
+keywords = {Mathematical physics, Wave equation},
+file = {Waves and oscillations.pdf:C\:\\Users\\keken\\AppData\\Roaming\\Zotero\\Zotero\\Profiles\\c2dt9vzv.default\\zotero\\storage\\GVCPRF4X\\[Blue] waves and oscillations.pdf:application/pdf}
+}
+
+@article{fink_time-reversed_1999,
+title = {Time-reversed acoustics},
+volume = {281},
+url = {http://www.usna.edu/Users/math/rmm/Papers/fink2.pdf},
+number = {5},
+urldate = {2016-01-19},
+journal = {Scientific American},
+author = {Fink, Mathias and {others}},
+year = {1999},
+pages = {91--97},
+}
+
+@article{_brief_2004,
+title = {A brief history of {Wi}-{Fi}},
+issn = {0013-0613},
+url = {http://www.economist.com/node/2724397},
+abstract = {Wireless networking: Few people have a kind word to say about telecoms regulators. But the success of Wi-Fi shows what can be achieved when regulators and technologists work together},
+urldate = {2016-03-22},
+journal = {The Economist},
+month = jun,
+year = {2004},
+}
+
+@misc{_first_1996,
+title = {First {GSM}-based communicator product hits the market {Nokia} {Starts} {Sales} of the {Nokia} 9000 {Communicator}},
+url = {http://company.nokia.com/en/news/press-releases/1996/08/15/first-gsm-based-communicator-product-hits-the-market-nokia-starts-sales-of-the-nokia-9000-communicator},
+abstract = {The Nokia 9000 Communicator provides a wide range of mobile communications services as well as personal organiser functions. The product combines a GSM phone with applications like fax, e-mail, short messaging and Internet access. It also includes the most useful organizer functions; a calendar, an address book and a calculator. All of this is available in a sophisticated, pocket-sized unit.},
+urldate = {2016-03-22},
+journal = {Nokia},
+month = aug,
+year = {1996},
+}
+
+@book{arfken,
+ title={Mathematical methods for physicists: A comprehensive guide},
+ author={Arfken, George B and Weber, Hans J and Harris, Frank E},
+ year={2011},
+ publisher={Academic press}
+}
+
+@misc{wattup,
+ title={Wireless power transmission with selective range},
+ author={Leabman, Michael A and Brewer, Gregory Scott},
+ year={2015},
+ month=sep # "~1",
+ publisher={Google Patents},
+ note={US Patent 9,124,125}
+}
+
+@article{fink,
+ title={Time reversal of electromagnetic waves},
+ author={Lerosey, Geoffroy and De Rosny, J and Tourin, A and Derode, A and Montaldo, G and Fink, M},
+ journal={Physical review letters},
+ volume={92},
+ number={19},
+ pages={193904},
+ year={2004},
+ publisher={APS}
+}
+
+@article{hong_nonlinear_2014,
+title = {Nonlinear {Electromagnetic} {Time} {Reversal} in an {Open} {Semireverberant} {System}},
+volume = {2},
+issn = {2331-7019},
+url = {http://link.aps.org/doi/10.1103/PhysRevApplied.2.044013},
+doi = {10.1103/PhysRevApplied.2.044013},
+language = {en},
+number = {4},
+urldate = {2015-04-07},
+journal = {Physical Review Applied},
+author = {Hong, Sun K. and Mendez, Victor M. and Koch, Trystan and Wall, Walter S. and Anlage, Steven M.},
+month = oct,
+year = {2014},
+}
+
+@article{nltr-classical-waves,
+ title={Nonlinear time reversal of classical waves: Experiment and model},
+ author={Frazier, Matthew and Taddese, Biniyam and Xiao, Bo and Antonsen, Thomas and Ott, Edward and Anlage, Steven M},
+ journal={Physical Review E},
+ volume={88},
+ number={6},
+ pages={062910},
+ year={2013},
+ publisher={APS}
+}
+
+@article{prada-mirror,
+ title={The iterative time reversal mirror: A solution to self-focusing in the pulse echo mode},
+ author={Prada, Claire and Wu, Francois and Fink, Mathias},
+ journal={The Journal of the Acoustical Society of America},
+ volume={90},
+ number={2},
+ pages={1119--1129},
+ year={1991},
+ publisher={Acoustical Society of America}
+}
+
+@article{hemmady,
+ title={Statistical prediction and measurement of induced voltages on components within complicated enclosures: A wave-chaotic approach},
+ author={Hemmady, Sameer and Antonsen, Thomas M and Ott, Edward and Anlage, Steven M},
+ journal={Electromagnetic Compatibility, IEEE Transactions on},
+ volume={54},
+ number={4},
+ pages={758--771},
+ year={2012},
+ publisher={IEEE}
+}
+
+@article{lerosey-focusing,
+ title={Focusing beyond the diffraction limit with far-field time reversal},
+ author={Lerosey, Geoffroy and De Rosny, Julien and Tourin, Arnaud and Fink, Mathias},
+ journal={Science},
+ volume={315},
+ number={5815},
+ pages={1120--1122},
+ year={2007},
+ publisher={American Association for the Advancement of Science}
+}
+
+@article{derode-mult,
+ title={Time reversal versus phase conjugation in a multiple scattering environment},
+ author={Derode, Arnaud and Tourin, Arnaud and Fink, Mathias},
+ journal={Ultrasonics},
+ volume={40},
+ number={1},
+ pages={275--280},
+ year={2002},
+ publisher={Elsevier}
+}

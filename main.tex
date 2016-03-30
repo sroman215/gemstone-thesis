@@ -1,0 +1,69 @@
+% -*- Mode:TeX -*-
+
+%% Frank Cangialosi
+%% Gemstone Team TESLA
+%% University of Maryland, College Park
+%% frank@cs.umd.edu
+%%
+%% Created: March 29, 2016
+%% Last Updated: March 30, 2016
+%%
+
+\documentclass[12pt,twoside]{mitthesis}
+\usepackage{lgrind}
+\usepackage[toc]{glossaries}
+\usepackage{xcolor}
+\usepackage[detect-none]{siunitx}
+    \sisetup{range-phrase = \text{--}}
+\usepackage{graphicx}
+    \graphicspath{ {figs/} }
+    \DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{subcaption}
+%% These have been added at the request of the MIT Libraries, because
+%% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\pagestyle{plain}
+
+%% Glossary
+\makeglossaries
+\loadglsentries{tesla-glossary}
+
+%% Drafting Commands
+\newcommand\todo[1]{TODO:\textcolor{red}{#1}}
+
+%% Table Comands
+\newcommand\cellstack[1]{\rule{0pt}{2.5em}\shortstack{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\include{cover}
+
+\pagestyle{plain}
+
+%% Table of Contents
+\include{contents}
+
+%% Chapters
+\include{ch-intro}
+\include{ch-lit-review}
+\include{ch-numerical}
+
+%% Appendix
+\appendix
+\include{appa}
+\include{appb}
+
+%% Glossary
+\include{glossary}
+
+%% Bibliography
+\include{biblio}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
